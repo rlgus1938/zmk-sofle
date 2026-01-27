@@ -1,20 +1,95 @@
+// ==========================================================================
+// ZMK Keymap - Auto-generated
+// Generated: 2026-01-27T10:47:09.370738
+// DO NOT EDIT - Modify keymap.yaml and run generate.py
+// ==========================================================================
+
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
+#include <behaviors/uc.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define LAYER_BASE 0
+#define LAYER_WINDOWS 1
+#define LAYER_SUBLAYERS 2
+#define LAYER_SYMBOLS 3
+#define LAYER_APPLICATIONS 4
+#define LAYER_SYSTEM 5
+#define LAYER_NAVIGATIONS 6
+#define LAYER_RAYCAST 7
+#define LAYER_SESSIONS 8
+#define LAYER_AEROSPACE 9
+#define LAYER_FUNCTIONS 10
+#define LAYER_KEYBOARD 11
+#define LAYER_TEMPLATE 99
+
 / {
+    behaviors {
+        // Homerow mod - standard
+        hrm: hrm {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <300>;
+            require-prior-idle-ms = <0>;
+            bindings = <&kp>, <&kp>;
+            flavor = "tap-preferred";
+        };
+
+        // Homerow mod - weak finger
+        hrw: hrw {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <0>;
+            retro-tap;
+            bindings = <&kp>, <&kp>;
+            flavor = "tap-preferred";
+        };
+
+        // Mod-tap standard
+        my_mt: my_mt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            bindings = <&kp>, <&kp>;
+            flavor = "tap-preferred";
+        };
+
+        // Layer-tap
+        my_lt: my_lt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            bindings = <&kp>, <&kp>;
+            flavor = "tap-preferred";
+        };
+
+        // Mod-tap for Windows layer
+        my_mtw: my_mtw {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            flavor = "tap-preferred";
+        };
+
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        layer_0 {
+        // Main typing layer for macOS
+        layer_base {
             bindings = <
-&kp ESC    &kp NUMBER_1  &kp NUMBER_2      &kp NUMBER_3  &kp NUMBER_4      &kp NUMBER_5                           &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &kp BACKSPACE
-&kp TAB    &kp Q         &kp W             &kp E         &kp R             &kp T                                  &kp Y         &kp U         &kp I         &kp O         &kp P          &kp BACKSLASH
-&kp GRAVE  &kp A         &kp S             &kp D         &kp F             &kp G                                  &kp H         &kp J         &kp K         &kp L         &kp SEMICOLON  &kp SQT
-&kp F17    &kp Z         &kp X             &kp C         &kp V             &kp B         &kp K_MUTE    &mkp LCLK  &kp N         &kp M         &kp COMMA     &kp DOT       &kp SLASH      &kp RSHIFT
-                         &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp CAPS      &kp ENTER     &kp SPACE  &kp F18       &mo 1         &none         &kp HOME
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &my_mt CAPS TAB   &kp Q   &my_lt LAYER_SYSTEM W   &kp E   &my_mt LG(R) R   &kp T   &kp Y   &kp U   &kp I   &kp O   &kp P   &kp BSLH
+  &my_lt LAYER_NAVIGATIONS ESC   &hrm LCTRL A   &hrm LSHIFT S   &hrm LALT D   &hrm LGUI F   &kp G   &kp H   &hrm RGUI J   &hrm RALT K   &hrm RSHIFT L   &hrm RCTRL SEMI   &kp SQT
+  &my_mt LG(LA(LC(LS(F2)))) LG(LA(LC(LS(F1))))   &my_mt LG(TAB) Z   &my_mt LG(GRAVE) X   &my_mt LG(C) C   &my_mt LG(V) V   &my_mt LA(V) B   &kp K_MUTE       &kp C_PP   &kp N   &kp M   &kp COMMA   &kp DOT   &kp FSLH   &kp RSHIFT
+  &none   &none   &my_lt LAYER_SYMBOLS BSPC   &none   &none   &kp SPACE   &mo LAYER_Keyboard   &my_lt LAYER_SUBLAYERS RET   &none   &none
             >;
 
             sensor-bindings =
@@ -22,18 +97,185 @@
                 <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
         };
 
-        layer_1 {
+        // Windows-style shortcuts layer
+        layer_windows {
             bindings = <
-&kp ESC  &kp F1    &kp F2     &kp F3     &kp F4            &kp F5                                  &kp F6      &kp F7    &kp F8          &kp F9           &kp F10    &kp BSPC
-&kp TAB  &trans    &kp UP     &trans     &bt BT_CLR        &kp PAGE_UP                             &trans      &trans    &kp UNDER       &kp MINUS        &kp EQUAL  &kp PLUS
-&trans   &kp LEFT  &kp DOWN   &kp RIGHT  &trans            &kp PAGE_DOWN                           &kp LPAR    &kp RPAR  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LBKT   &kp RBKT
-&kp F17  &trans    &trans     &trans     &trans            &trans         &kp K_MUTE    &mkp RCLK  &trans      &trans    &trans          &trans           &trans     &kp RSHFT
-                   &kp LCTRL  &kp LALT   &kp LEFT_COMMAND  &kp CAPS       &kp RET       &kp SPACE  &bt BT_NXT  &trans    &none           &kp END
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &kp K_MUTE       &kp C_PP   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
             >;
 
             sensor-bindings =
                 <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
                 <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
         };
+
+        // Hub for accessing other layers
+        layer_sublayers {
+            bindings = <
+  &tog LAYER_WINDOWS   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &my_lt LAYER_FUNCTIONS BSPC
+  &none   &none   &none   &none   &my_lt LAYER_RAYCAST R   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &my_lt LAYER_SESSIONS S   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &kp K_MUTE       &kp C_PP   &none   &none   &none   &none   &none   &none
+  &none   &none   &my_lt LAYER_APPLICATIONS BSPC   &none   &none   &none   &none   &none   &none   &none
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
+                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+        };
+
+        // Numbers and symbols
+        layer_symbols {
+            bindings = <
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &kp TILDE   &kp EXCL   &kp AT   &kp HASH   &kp DLLR   &kp PRCNT   &kp CARET   &kp AMPS   &kp STAR   &kp MINUS   &kp PLUS   &none
+  &uc 0x0060   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5   &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &kp SQT
+  &uc 0x20A9   &none   &kp LPAR   &kp RPAR   &kp LBRC   &kp RBRC   &kp K_MUTE       &kp C_PP   &kp LBKT   &kp RBKT   &kp COMMA   &kp UNDER   &kp EQUAL   &none
+  &none   &none   &none   &none   &none   &kp SPACE   &none   &kp RET   &none   &none
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
+                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+        };
+
+        // Application launcher via hyper key
+        layer_applications {
+            bindings = <
+  &none   &kp LG(LA(LC(LS(N1))))   &kp LG(LA(LC(LS(N2))))   &kp LG(LA(LC(LS(N3))))   &kp LG(LA(LC(LS(N4))))   &kp LG(LA(LC(LS(N5))))   &kp LG(LA(LC(LS(N6))))   &kp LG(LA(LC(LS(N7))))   &kp LG(LA(LC(LS(N8))))   &kp LG(LA(LC(LS(N9))))   &kp LG(LA(LC(LS(N0))))   &none
+  &none   &kp LG(LA(LC(LS(Q))))   &kp LG(LA(LC(LS(W))))   &kp LG(LA(LC(LS(E))))   &kp LG(LA(LC(LS(R))))   &kp LG(LA(LC(LS(T))))   &kp LG(LA(LC(LS(Y))))   &kp LG(LA(LC(LS(U))))   &kp LG(LA(LC(LS(I))))   &kp LG(LA(LC(LS(O))))   &kp LG(LA(LC(LS(P))))   &kp LG(LA(LC(LS(BSLH))))
+  &none   &kp LG(LA(LC(LS(A))))   &kp LG(LA(LC(LS(S))))   &kp LG(LA(LC(LS(D))))   &kp LG(LA(LC(LS(F))))   &kp LG(LA(LC(LS(G))))   &kp LG(LA(LC(LS(H))))   &kp LG(LA(LC(LS(J))))   &kp LG(LA(LC(LS(K))))   &kp LG(LA(LC(LS(L))))   &kp LG(LA(LC(LS(SEMI))))   &kp LG(LA(LC(LS(SQT))))
+  &none   &kp LG(LA(LC(LS(Z))))   &kp LG(LA(LC(LS(X))))   &kp LG(LA(LC(LS(C))))   &kp LG(LA(LC(LS(V))))   &kp LG(LA(LC(LS(B))))   &kp K_MUTE       &kp C_PP   &kp LG(LA(LC(LS(N))))   &kp LG(LA(LC(LS(M))))   &kp LG(LA(LC(LS(COMMA))))   &kp LG(LA(LC(LS(DOT))))   &kp LG(LA(LC(LS(FSLH))))   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
+                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+        };
+
+        // System controls - volume, brightness, media
+        layer_system {
+            bindings = <
+  &kp ESC   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &kp TAB   &none   &none   &kp C_VOLUME_UP   &kp C_BRIGHTNESS_INC   &kp LG(EQUAL)   &kp C_PREV   &none   &none   &kp C_NEXT   &kp C_PP   &none
+  &my_lt LAYER_AEROSPACE ESC   &none   &none   &kp C_VOLUME_DOWN   &kp C_BRIGHTNESS_DEC   &kp LG(MINUS)   &none   &none   &none   &none   &none   &kp RET
+  &kp LSHIFT   &kp LG(LC(Q))   &kp LG(W)   &none   &none   &none   &kp K_MUTE       &kp C_PP   &none   &kp K_MUTE   &none   &none   &none   &kp RSHIFT
+  &none   &kp DEL   &none   &none   &none   &none   &kp RGUI   &none   &none   &none
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
+                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+        };
+
+        // Arrow keys and navigation
+        layer_navigations {
+            bindings = <
+  &kp ESC   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &kp LS(LA(LEFT))   &kp LS(LA(DOWN))   &kp LS(LA(UP))   &kp LS(LA(RIGHT))   &none   &none
+  &none   &none   &none   &none   &none   &none   &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &none   &none
+  &kp LSHIFT   &none   &none   &none   &none   &none   &kp K_MUTE       &kp C_PP   &kp LG(LS(LBKT))   &kp LG(LS(RBKT))   &kp LG(LBKT)   &kp LG(RBKT)   &none   &kp RSHIFT
+  &none   &kp LALT   &kp LGUI   &trans   &none   &none   &kp RGUI   &none   &none   &none
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
+                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+        };
+
+        // Raycast commands
+        layer_raycast {
+            bindings = <
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &kp LG(F1)   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &kp LG(F2)   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &kp K_MUTE       &kp C_PP   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
+                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+        };
+
+        // Terminal/tmux session management
+        layer_sessions {
+            bindings = <
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &kp LG(F3)   &none   &none   &kp LG(F4)   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &kp K_MUTE       &kp C_PP   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
+                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+        };
+
+        // Aerospace window manager
+        layer_aerospace {
+            bindings = <
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &kp K_MUTE       &kp C_PP   &none   &none   &kp LG(F5)   &kp A(COMMA)   &kp A(FSLH)   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
+                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+        };
+
+        // F1-F20 function keys
+        layer_functions {
+            bindings = <
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F6   &kp F7   &kp F8   &kp F9   &kp F10   &none
+  &none   &kp LCTRL   &kp LSHIFT   &kp LALT   &kp LGUI   &none   &none   &kp RGUI   &kp RALT   &kp RSHIFT   &kp RCTRL   &none
+  &none   &kp F11   &kp F12   &kp F13   &kp F14   &kp F15   &kp K_MUTE       &kp C_PP   &kp F16   &kp F17   &kp F18   &kp F19   &kp F20   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
+                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+        };
+
+        // Keyboard settings - Bluetooth, reset
+        layer_keyboard {
+            bindings = <
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &bt BT_CLR
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none       &none   &none   &none   &none   &none   &none   &none
+  &none   &sys_reset   &none   &bootloader   &none   &bootloader   &none   &sys_reset   &none   &none
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
+                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+        };
+
+        // Template
+        layer_template {
+            bindings = <
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none       &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
+                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+        };
+
     };
 };
