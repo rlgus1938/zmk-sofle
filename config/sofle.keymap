@@ -1,6 +1,6 @@
 // ==========================================================================
 // ZMK Keymap - Auto-generated
-// Generated: 2026-01-27T15:37:44.353041
+// Generated: 2026-01-27T15:46:18.812328
 // DO NOT EDIT - Modify keymap.yaml and run generate.py
 // ==========================================================================
 
@@ -64,7 +64,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <300>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&mo>, <&kp>;
             flavor = "tap-preferred";
         };
 
