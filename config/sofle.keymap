@@ -1,6 +1,6 @@
 // ==========================================================================
 // ZMK Keymap - Auto-generated
-// Generated: 2026-01-27T15:46:18.812328
+// Generated: 2026-01-27T16:21:56.826863
 // DO NOT EDIT - Modify keymap.yaml and run generate.py
 // ==========================================================================
 
@@ -115,7 +115,7 @@
         // Hub for accessing other layers
         layer_sublayers {
             bindings = <
-  &tog LAYER_WINDOWS ESC   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &my_lt LAYER_FUNCTIONS BSPC
+  &tog LAYER_WINDOWS   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &my_lt LAYER_FUNCTIONS BSPC
   &none   &none   &none   &none   &my_lt LAYER_RAYCAST R   &none   &none   &none   &none   &none   &none   &none
   &none   &none   &my_lt LAYER_SESSIONS S   &none   &none   &none   &none   &none   &none   &none   &none   &none
   &none   &none   &none   &none   &none   &none   &kp K_MUTE       &kp C_PP   &none   &none   &none   &none   &none   &none
