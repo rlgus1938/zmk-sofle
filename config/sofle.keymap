@@ -1,6 +1,6 @@
 // ==========================================================================
 // ZMK Keymap - Auto-generated
-// Generated: 2026-01-27T16:53:24.067964
+// Generated: 2026-02-01T22:08:52.579495
 // DO NOT EDIT - Modify keymap.yaml and run generate.py
 // ==========================================================================
 
@@ -85,339 +85,196 @@
         // Main typing layer for macOS
         layer_base {
             bindings = <
-//    ┌──────────────────────────────────────────────────────────────┬────────────────────┬─────────────────────────┬──────────────────┬───────────────────────────┬──────────────────┐                 ┌─────┬──────────────────────────────┬─────────────┬─────────────────────┬─────────────┬──────┐
-//    │                                                              │                    │                         │                  │                           │                  │                 │     │                              │             │                     │             │      │
-//    ├──────────────────────────────────────────────────────────────┼────────────────────┼─────────────────────────┼──────────────────┼───────────────────────────┼──────────────────┤                 ├─────┼──────────────────────────────┼─────────────┼─────────────────────┼─────────────┼──────┤
-//    │                       &my_mt caps tab                        │         Q          │ &my_lt laltYER_SYSTEM W │        E         │     &my_mt lgui(R) R      │        T         │                 │  Y  │              U               │      I      │          O          │      P      │  \   │
-//    ├──────────────────────────────────────────────────────────────┼────────────────────┼─────────────────────────┼──────────────────┼───────────────────────────┼──────────────────┤                 ├─────┼──────────────────────────────┼─────────────┼─────────────────────┼─────────────┼──────┤
-//    │                &my_lt laltYER_NAVIG@IONS esc                 │    &hrm lctl A     │       &hrm lsft S       │   &hrm lalt D    │        &hrm lgui F        │        G         │                 │  H  │         &hrm rgui J          │ &hrm ralt K │     &hrm rsft L     │ &hrm rctl ; │  '   │
-//    ├──────────────────────────────────────────────────────────────┼────────────────────┼─────────────────────────┼──────────────────┼───────────────────────────┼──────────────────┼──────┐   ┌──────┼─────┼──────────────────────────────┼─────────────┼─────────────────────┼─────────────┼──────┤
-//    │ &my_mt lgui(lalt(lctl(lsft(f2)))) lgui(lalt(lctl(lsft(f1)))) │ &my_mt lgui(tab) Z │    &my_mt lgui(`) X     │ &my_mt lgui(C) C │     &my_mt lgui(V) V      │ &my_mt lalt(V) B │ mute │   │ play │  N  │              M               │      ,      │          .          │      /      │ rsft │
-//    └──────────────────────────────────────────────────────────────┴────────────────────┼─────────────────────────┼──────────────────┼───────────────────────────┼──────────────────┼──────┤   ├──────┼─────┼──────────────────────────────┼─────────────┼─────────────────────┼─────────────┴──────┘
-//                                                                                        │                         │                  │ lt laltYER_SYMBOlsft bspc │                  │      │   │ spc  │     │ lt laltYER_SUBlaltYErsft ent │             │ mo laltYER_KEYBOARD │
-//                                                                                        └─────────────────────────┴──────────────────┴───────────────────────────┴──────────────────┴──────┘   └──────┴─────┴──────────────────────────────┴─────────────┴─────────────────────┘
-  &none                                          &none              &none                   &none            &none                    &none                                         &none   &none                     &none         &none                &none             &none
-  &my_mt CAPS TAB                                &kp Q              &my_lt LAYER_SYSTEM W   &kp E            &my_mt LG(R) R           &kp T                                         &kp Y   &kp U                     &kp I         &kp O                &kp P             &kp BSLH
-  &my_lt LAYER_NAVIGATIONS ESC                   &hrm LCTRL A       &hrm LSHIFT S           &hrm LALT D      &hrm LGUI F              &kp G                                         &kp H   &hrm RGUI J               &hrm RALT K   &hrm RSHIFT L        &hrm RCTRL SEMI   &kp SQT
-  &my_mt LG(LA(LC(LS(F2)))) LG(LA(LC(LS(F1))))   &my_mt LG(TAB) Z   &my_mt LG(GRAVE) X      &my_mt LG(C) C   &my_mt LG(V) V           &my_mt LA(V) B   &kp K_MUTE       &kp C_PP    &kp N   &kp M                     &kp COMMA     &kp DOT              &kp FSLH          &kp RSHIFT
-                                                                    &none                   &none            &lt LAYER_SYMBOLS BSPC   &none            &none            &kp SPACE   &none   &lt LAYER_SUBLAYERS RET   &none         &mo LAYER_KEYBOARD
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &my_mt CAPS TAB   &kp Q   &my_lt LAYER_SYSTEM W   &kp E   &my_mt LG(R) R   &kp T   &kp Y   &kp U   &kp I   &kp O   &kp P   &kp BSLH
+  &my_lt LAYER_NAVIGATIONS ESC   &hrm LCTRL A   &hrm LSHIFT S   &hrm LALT D   &hrm LGUI F   &kp G   &kp H   &hrm RGUI J   &hrm RALT K   &hrm RSHIFT L   &hrm RCTRL SEMI   &kp SQT
+  &my_mt LG(LA(LC(LS(F2)))) LG(LA(LC(LS(F1))))   &my_mt LG(TAB) Z   &my_mt LG(GRAVE) X   &my_mt LG(C) C   &my_mt LG(V) V   &my_mt LA(V) B   &kp K_MUTE       &kp C_PP   &kp N   &kp M   &kp COMMA   &kp DOT   &kp FSLH   &kp RSHIFT
+  &kp F18   &none   &lt LAYER_SYMBOLS RET   &none   &none   &kp SPACE   &none   &lt LAYER_SUBLAYERS BSPC   &none   &mo LAYER_KEYBOARD
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
-                <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         // Windows-style shortcuts layer
         layer_windows {
             bindings = <
-//    ┌─────┬─────┬─────┬─────┬─────┬─────┐                 ┌─────┬─────┬─────┬─────┬─────┬─────┐
-//    │     │     │     │     │     │     │                 │     │     │     │     │     │     │
-//    ├─────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼─────┤
-//    │     │     │     │     │     │     │                 │     │     │     │     │     │     │
-//    ├─────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼─────┤
-//    │     │     │     │     │     │     │                 │     │     │     │     │     │     │
-//    ├─────┼─────┼─────┼─────┼─────┼─────┼──────┐   ┌──────┼─────┼─────┼─────┼─────┼─────┼─────┤
-//    │     │     │     │     │     │     │ mute │   │ play │     │     │     │     │     │     │
-//    └─────┴─────┼─────┼─────┼─────┼─────┼──────┤   ├──────┼─────┼─────┼─────┼─────┼─────┴─────┘
-//                │     │     │     │     │      │   │      │     │     │     │     │
-//                └─────┴─────┴─────┴─────┴──────┘   └──────┴─────┴─────┴─────┴─────┘
-  &none   &none   &none   &none   &none   &none                               &none   &none   &none   &none   &none   &none
-  &none   &none   &none   &none   &none   &none                               &none   &none   &none   &none   &none   &none
-  &none   &none   &none   &none   &none   &none                               &none   &none   &none   &none   &none   &none
-  &none   &none   &none   &none   &none   &none   &kp K_MUTE       &kp C_PP   &none   &none   &none   &none   &none   &none
-                  &none   &none   &none   &none   &none            &none      &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &kp TAB   &kp Q   &my_lt LAYER_SYSTEM W   &my_mtw LG(E) E   &my_mtw LC(R) R   &kp T   &kp Y   &kp U   &kp I   &kp O   &kp P   &kp BSLH
+  &my_lt LAYER_NAVIGATIONS ESC   &my_mtw LCTRL A   &my_mtw LSHIFT S   &my_mtw LALT D   &my_mtw LGUI F   &kp G   &kp H   &my_mtw RGUI J   &my_mtw RALT K   &my_mtw RSHIFT L   &my_mtw RCTRL SEMI   &kp SQT
+  &kp LSHIFT   &my_mtw LA(TAB) Z   &my_mtw LC(X) X   &my_mtw LC(C) C   &my_mtw LC(V) V   &kp B   &kp K_MUTE       &kp C_PP   &kp N   &kp M   &kp COMMA   &kp DOT   &kp FSLH   &kp RSHIFT
+  &kp K_CMENU   &none   &my_lt LAYER_SYMBOLS RET   &none   &none   &kp SPACE   &none   &my_lt LAYER_SUBLAYERS BSPC   &none   &mo LAYER_KEYBOARD
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
-                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         // Hub for accessing other layers
         layer_sublayers {
             bindings = <
-//    ┌─────────────────────┬─────┬───────────────────────────┬─────┬─────────────────────────────────┬─────┐                 ┌─────┬─────┬─────┬─────┬─────┬───────────────────────────────┐
-//    │ tog laltYER_WINDOWS │     │                           │     │                                 │     │                 │     │     │     │     │     │ &my_lt laltYER_FUNCTIONS bspc │
-//    ├─────────────────────┼─────┼───────────────────────────┼─────┼─────────────────────────────────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼───────────────────────────────┤
-//    │                     │     │                           │     │   &my_lt laltYER_raltYCAST R    │     │                 │     │     │     │     │     │                               │
-//    ├─────────────────────┼─────┼───────────────────────────┼─────┼─────────────────────────────────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼───────────────────────────────┤
-//    │                     │     │ &my_lt laltYER_SESSIONS S │     │                                 │     │                 │     │     │     │     │     │                               │
-//    ├─────────────────────┼─────┼───────────────────────────┼─────┼─────────────────────────────────┼─────┼──────┐   ┌──────┼─────┼─────┼─────┼─────┼─────┼───────────────────────────────┤
-//    │                     │     │                           │     │                                 │     │ mute │   │ play │     │     │     │     │     │                               │
-//    └─────────────────────┴─────┼───────────────────────────┼─────┼─────────────────────────────────┼─────┼──────┤   ├──────┼─────┼─────┼─────┼─────┼─────┴───────────────────────────────┘
-//                                │                           │     │ &my_lt laltYER_APPLIC@IONS bspc │     │      │   │      │     │     │     │     │
-//                                └───────────────────────────┴─────┴─────────────────────────────────┴─────┴──────┘   └──────┴─────┴─────┴─────┴─────┘
-  &tog LAYER_WINDOWS   &none   &none                     &none   &none                            &none                               &none   &none   &none   &none   &none   &my_lt LAYER_FUNCTIONS BSPC
-  &none                &none   &none                     &none   &my_lt LAYER_RAYCAST R           &none                               &none   &none   &none   &none   &none   &none
-  &none                &none   &my_lt LAYER_SESSIONS S   &none   &none                            &none                               &none   &none   &none   &none   &none   &none
-  &none                &none   &none                     &none   &none                            &none   &kp K_MUTE       &kp C_PP   &none   &none   &none   &none   &none   &none
-                               &none                     &none   &my_lt LAYER_APPLICATIONS BSPC   &none   &none            &none      &none   &none   &none   &none
+  &tog LAYER_WINDOWS   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &my_lt LAYER_FUNCTIONS BSPC
+  &none   &none   &none   &none   &my_lt LAYER_RAYCAST R   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &my_lt LAYER_SESSIONS S   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &kp K_MUTE       &kp C_PP   &none   &none   &none   &none   &none   &none
+  &none   &none   &my_lt LAYER_APPLICATIONS BSPC   &none   &none   &none   &none   &none   &none   &none
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
-                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         // Numbers and symbols
         layer_symbols {
             bindings = <
-//    ┌────────────┬─────┬─────┬─────┬─────┬─────┐                 ┌─────┬─────┬─────┬─────┬─────┬─────┐
-//    │            │     │     │     │     │     │                 │     │     │     │     │     │     │
-//    ├────────────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼─────┤
-//    │     ~      │  !  │  @  │  #  │  $  │  %  │                 │  ^  │  &  │  *  │  -  │  +  │     │
-//    ├────────────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼─────┤
-//    │     `      │  1  │  2  │  3  │  4  │  5  │                 │  6  │  7  │  8  │  9  │  0  │  '  │
-//    ├────────────┼─────┼─────┼─────┼─────┼─────┼──────┐   ┌──────┼─────┼─────┼─────┼─────┼─────┼─────┤
-//    │ &uc 0x20A9 │     │  (  │  )  │  {  │  }  │ mute │   │ play │  [  │  ]  │  ,  │  _  │  =  │     │
-//    └────────────┴─────┼─────┼─────┼─────┼─────┼──────┤   ├──────┼─────┼─────┼─────┼─────┼─────┴─────┘
-//                       │     │     │     │     │      │   │ spc  │     │ ent │     │     │
-//                       └─────┴─────┴─────┴─────┴──────┘   └──────┴─────┴─────┴─────┴─────┘
-  &none        &none      &none      &none      &none      &none                                    &none       &none      &none       &none       &none       &none
-  &kp TILDE    &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT                                &kp CARET   &kp AMPS   &kp STAR    &kp MINUS   &kp PLUS    &none
-  &kp GRAVE    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                                   &kp N6      &kp N7     &kp N8      &kp N9      &kp N0      &kp SQT
-  &uc 0x20A9   &none      &kp LPAR   &kp RPAR   &kp LBRC   &kp RBRC    &kp K_MUTE       &kp C_PP    &kp LBKT    &kp RBKT   &kp COMMA   &kp UNDER   &kp EQUAL   &none
-                          &none      &none      &none      &none       &none            &kp SPACE   &none       &kp RET    &none       &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &kp TILDE   &kp EXCL   &kp AT   &kp HASH   &kp DLLR   &kp PRCNT   &kp CARET   &kp AMPS   &kp STAR   &kp MINUS   &kp PLUS   &none
+  &uc 0x0060   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5   &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &kp SQT
+  &uc 0x20A9   &none   &kp LPAR   &kp RPAR   &kp LBRC   &kp RBRC   &kp K_MUTE       &kp C_PP   &kp LBKT   &kp RBKT   &kp COMMA   &kp UNDER   &kp EQUAL   &none
+  &none   &none   &none   &none   &none   &kp SPACE   &none   &kp RET   &none   &none
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
-                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         // Application launcher via hyper key
         layer_applications {
             bindings = <
-//    ┌─────┬───────────────────────────┬───────────────────────────┬───────────────────────────┬───────────────────────────┬───────────────────────────┐                 ┌───────────────────────────┬───────────────────────────┬───────────────────────────┬───────────────────────────┬───────────────────────────┬───────────────────────────┐
-//    │     │ lgui(lalt(lctl(lsft(1)))) │ lgui(lalt(lctl(lsft(2)))) │ lgui(lalt(lctl(lsft(3)))) │ lgui(lalt(lctl(lsft(4)))) │ lgui(lalt(lctl(lsft(5)))) │                 │ lgui(lalt(lctl(lsft(6)))) │ lgui(lalt(lctl(lsft(7)))) │ lgui(lalt(lctl(lsft(8)))) │ lgui(lalt(lctl(lsft(9)))) │ lgui(lalt(lctl(lsft(0)))) │                           │
-//    ├─────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┤                 ├───────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┤
-//    │     │ lgui(lalt(lctl(lsft(Q)))) │ lgui(lalt(lctl(lsft(W)))) │ lgui(lalt(lctl(lsft(E)))) │ lgui(lalt(lctl(lsft(R)))) │ lgui(lalt(lctl(lsft(T)))) │                 │ lgui(lalt(lctl(lsft(Y)))) │ lgui(lalt(lctl(lsft(U)))) │ lgui(lalt(lctl(lsft(I)))) │ lgui(lalt(lctl(lsft(O)))) │ lgui(lalt(lctl(lsft(P)))) │ lgui(lalt(lctl(lsft(\)))) │
-//    ├─────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┤                 ├───────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┤
-//    │     │ lgui(lalt(lctl(lsft(A)))) │ lgui(lalt(lctl(lsft(S)))) │ lgui(lalt(lctl(lsft(D)))) │ lgui(lalt(lctl(lsft(F)))) │ lgui(lalt(lctl(lsft(G)))) │                 │ lgui(lalt(lctl(lsft(H)))) │ lgui(lalt(lctl(lsft(J)))) │ lgui(lalt(lctl(lsft(K)))) │ lgui(lalt(lctl(lsft(L)))) │ lgui(lalt(lctl(lsft(;)))) │ lgui(lalt(lctl(lsft(')))) │
-//    ├─────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼──────┐   ┌──────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┤
-//    │     │ lgui(lalt(lctl(lsft(Z)))) │ lgui(lalt(lctl(lsft(X)))) │ lgui(lalt(lctl(lsft(C)))) │ lgui(lalt(lctl(lsft(V)))) │ lgui(lalt(lctl(lsft(B)))) │ mute │   │ play │ lgui(lalt(lctl(lsft(N)))) │ lgui(lalt(lctl(lsft(M)))) │ lgui(lalt(lctl(lsft(,)))) │ lgui(lalt(lctl(lsft(.)))) │ lgui(lalt(lctl(lsft(/)))) │                           │
-//    └─────┴───────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼──────┤   ├──────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┼───────────────────────────┴───────────────────────────┘
-//                                      │                           │                           │                           │                           │      │   │      │                           │                           │                           │                           │
-//                                      └───────────────────────────┴───────────────────────────┴───────────────────────────┴───────────────────────────┴──────┘   └──────┴───────────────────────────┴───────────────────────────┴───────────────────────────┴───────────────────────────┘
-  &none   &kp LG(LA(LC(LS(N1))))   &kp LG(LA(LC(LS(N2))))   &kp LG(LA(LC(LS(N3))))   &kp LG(LA(LC(LS(N4))))   &kp LG(LA(LC(LS(N5))))                               &kp LG(LA(LC(LS(N6))))   &kp LG(LA(LC(LS(N7))))   &kp LG(LA(LC(LS(N8))))      &kp LG(LA(LC(LS(N9))))    &kp LG(LA(LC(LS(N0))))     &none
-  &none   &kp LG(LA(LC(LS(Q))))    &kp LG(LA(LC(LS(W))))    &kp LG(LA(LC(LS(E))))    &kp LG(LA(LC(LS(R))))    &kp LG(LA(LC(LS(T))))                                &kp LG(LA(LC(LS(Y))))    &kp LG(LA(LC(LS(U))))    &kp LG(LA(LC(LS(I))))       &kp LG(LA(LC(LS(O))))     &kp LG(LA(LC(LS(P))))      &kp LG(LA(LC(LS(BSLH))))
-  &none   &kp LG(LA(LC(LS(A))))    &kp LG(LA(LC(LS(S))))    &kp LG(LA(LC(LS(D))))    &kp LG(LA(LC(LS(F))))    &kp LG(LA(LC(LS(G))))                                &kp LG(LA(LC(LS(H))))    &kp LG(LA(LC(LS(J))))    &kp LG(LA(LC(LS(K))))       &kp LG(LA(LC(LS(L))))     &kp LG(LA(LC(LS(SEMI))))   &kp LG(LA(LC(LS(SQT))))
-  &none   &kp LG(LA(LC(LS(Z))))    &kp LG(LA(LC(LS(X))))    &kp LG(LA(LC(LS(C))))    &kp LG(LA(LC(LS(V))))    &kp LG(LA(LC(LS(B))))    &kp K_MUTE       &kp C_PP   &kp LG(LA(LC(LS(N))))    &kp LG(LA(LC(LS(M))))    &kp LG(LA(LC(LS(COMMA))))   &kp LG(LA(LC(LS(DOT))))   &kp LG(LA(LC(LS(FSLH))))   &none
-                                   &none                    &none                    &none                    &none                    &none            &none      &none                    &none                    &none                       &none
+  &none   &kp LG(LA(LC(LS(N1))))   &kp LG(LA(LC(LS(N2))))   &kp LG(LA(LC(LS(N3))))   &kp LG(LA(LC(LS(N4))))   &kp LG(LA(LC(LS(N5))))   &kp LG(LA(LC(LS(N6))))   &kp LG(LA(LC(LS(N7))))   &kp LG(LA(LC(LS(N8))))   &kp LG(LA(LC(LS(N9))))   &kp LG(LA(LC(LS(N0))))   &none
+  &none   &kp LG(LA(LC(LS(Q))))   &kp LG(LA(LC(LS(W))))   &kp LG(LA(LC(LS(E))))   &kp LG(LA(LC(LS(R))))   &kp LG(LA(LC(LS(T))))   &kp LG(LA(LC(LS(Y))))   &kp LG(LA(LC(LS(U))))   &kp LG(LA(LC(LS(I))))   &kp LG(LA(LC(LS(O))))   &kp LG(LA(LC(LS(P))))   &kp LG(LA(LC(LS(BSLH))))
+  &none   &kp LG(LA(LC(LS(A))))   &kp LG(LA(LC(LS(S))))   &kp LG(LA(LC(LS(D))))   &kp LG(LA(LC(LS(F))))   &kp LG(LA(LC(LS(G))))   &kp LG(LA(LC(LS(H))))   &kp LG(LA(LC(LS(J))))   &kp LG(LA(LC(LS(K))))   &kp LG(LA(LC(LS(L))))   &kp LG(LA(LC(LS(SEMI))))   &kp LG(LA(LC(LS(SQT))))
+  &none   &kp LG(LA(LC(LS(Z))))   &kp LG(LA(LC(LS(X))))   &kp LG(LA(LC(LS(C))))   &kp LG(LA(LC(LS(V))))   &kp LG(LA(LC(LS(B))))   &kp K_MUTE       &kp C_PP   &kp LG(LA(LC(LS(N))))   &kp LG(LA(LC(LS(M))))   &kp LG(LA(LC(LS(COMMA))))   &kp LG(LA(LC(LS(DOT))))   &kp LG(LA(LC(LS(FSLH))))   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
-                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         // System controls - volume, brightness, media
         layer_system {
             bindings = <
-//    ┌────────────────────────────┬───────────────┬─────────┬──────┬──────┬─────────┐                 ┌──────┬──────┬─────┬──────┬──────┬──────┐
-//    │            esc             │               │         │      │      │         │                 │      │      │     │      │      │      │
-//    ├────────────────────────────┼───────────────┼─────────┼──────┼──────┼─────────┤                 ├──────┼──────┼─────┼──────┼──────┼──────┤
-//    │            tab             │               │         │ volu │ bri+ │ lgui(=) │                 │ prev │      │     │ next │ play │      │
-//    ├────────────────────────────┼───────────────┼─────────┼──────┼──────┼─────────┤                 ├──────┼──────┼─────┼──────┼──────┼──────┤
-//    │ &my_lt laltYER_AEROspc esc │               │         │ vold │ bri- │ lgui(-) │                 │      │      │     │      │      │ ent  │
-//    ├────────────────────────────┼───────────────┼─────────┼──────┼──────┼─────────┼──────┐   ┌──────┼──────┼──────┼─────┼──────┼──────┼──────┤
-//    │            lsft            │ lgui(lctl(Q)) │ lgui(W) │      │      │         │ mute │   │ play │      │ mute │     │      │      │ rsft │
-//    └────────────────────────────┴───────────────┼─────────┼──────┼──────┼─────────┼──────┤   ├──────┼──────┼──────┼─────┼──────┼──────┴──────┘
-//                                                 │         │ del  │      │         │      │   │      │ rgui │      │     │      │
-//                                                 └─────────┴──────┴──────┴─────────┴──────┘   └──────┴──────┴──────┴─────┴──────┘
-  &kp ESC                      &none           &none       &none               &none                  &none                                       &none        &none        &none   &none        &none      &none
-  &kp TAB                      &none           &none       &kp C_VOLUME_UP     &kp C_BRIGHTNESS_INC   &kp LG(EQUAL)                               &kp C_PREV   &none        &none   &kp C_NEXT   &kp C_PP   &none
-  &my_lt LAYER_AEROSPACE ESC   &none           &none       &kp C_VOLUME_DOWN   &kp C_BRIGHTNESS_DEC   &kp LG(MINUS)                               &none        &none        &none   &none        &none      &kp RET
-  &kp LSHIFT                   &kp LG(LC(Q))   &kp LG(W)   &none               &none                  &none           &kp K_MUTE       &kp C_PP   &none        &kp K_MUTE   &none   &none        &none      &kp RSHIFT
-                                               &none       &kp DEL             &none                  &none           &none            &none      &kp RGUI     &none        &none   &none
+  &kp ESC   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &kp TAB   &none   &none   &kp C_VOLUME_UP   &kp C_BRIGHTNESS_INC   &kp LG(EQUAL)   &kp C_PREV   &none   &none   &kp C_NEXT   &kp C_PP   &none
+  &my_lt LAYER_AEROSPACE ESC   &none   &none   &kp C_VOLUME_DOWN   &kp C_BRIGHTNESS_DEC   &kp LG(MINUS)   &none   &none   &none   &none   &none   &kp RET
+  &kp LSHIFT   &kp LG(LC(Q))   &kp LG(W)   &none   &none   &none   &kp K_MUTE       &kp C_PP   &none   &kp K_MUTE   &none   &none   &none   &kp RSHIFT
+  &none   &none   &kp DEL   &none   &none   &none   &none   &none   &none   &none
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
-                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         // Arrow keys and navigation
         layer_navigations {
             bindings = <
-//    ┌──────┬─────┬─────┬──────┬──────┬─────┐                 ┌──────────────────┬──────────────────┬────────────────┬──────────────────┬─────┬──────┐
-//    │ esc  │     │     │      │      │     │                 │                  │                  │                │                  │     │      │
-//    ├──────┼─────┼─────┼──────┼──────┼─────┤                 ├──────────────────┼──────────────────┼────────────────┼──────────────────┼─────┼──────┤
-//    │      │     │     │      │      │     │                 │ lsft(lalt(left)) │ lsft(lalt(down)) │ lsft(lalt(up)) │ lsft(lalt(rght)) │     │      │
-//    ├──────┼─────┼─────┼──────┼──────┼─────┤                 ├──────────────────┼──────────────────┼────────────────┼──────────────────┼─────┼──────┤
-//    │      │     │     │      │      │     │                 │       left       │       down       │       up       │       rght       │     │      │
-//    ├──────┼─────┼─────┼──────┼──────┼─────┼──────┐   ┌──────┼──────────────────┼──────────────────┼────────────────┼──────────────────┼─────┼──────┤
-//    │ lsft │     │     │      │      │     │ mute │   │ play │  lgui(lsft([))   │  lgui(lsft(]))   │    lgui([)     │     lgui(])      │     │ rsft │
-//    └──────┴─────┼─────┼──────┼──────┼─────┼──────┤   ├──────┼──────────────────┼──────────────────┼────────────────┼──────────────────┼─────┴──────┘
-//                 │     │ lalt │ lgui │     │      │   │      │       rgui       │                  │                │                  │
-//                 └─────┴──────┴──────┴─────┴──────┘   └──────┴──────────────────┴──────────────────┴────────────────┴──────────────────┘
-  &kp ESC      &none   &none   &none      &none      &none                                &none              &none              &none            &none               &none   &none
-  &none        &none   &none   &none      &none      &none                                &kp LS(LA(LEFT))   &kp LS(LA(DOWN))   &kp LS(LA(UP))   &kp LS(LA(RIGHT))   &none   &none
-  &none        &none   &none   &none      &none      &none                                &kp LEFT           &kp DOWN           &kp UP           &kp RIGHT           &none   &none
-  &kp LSHIFT   &none   &none   &none      &none      &none    &kp K_MUTE       &kp C_PP   &kp LG(LS(LBKT))   &kp LG(LS(RBKT))   &kp LG(LBKT)     &kp LG(RBKT)        &none   &kp RSHIFT
-                       &none   &kp LALT   &kp LGUI   &trans   &none            &none      &kp RGUI           &none              &none            &none
+  &kp ESC   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &kp LS(LA(LEFT))   &kp LS(LA(DOWN))   &kp LS(LA(UP))   &kp LS(LA(RIGHT))   &none   &none
+  &none   &none   &none   &none   &none   &none   &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &none   &none
+  &kp LSHIFT   &none   &none   &none   &none   &none   &kp K_MUTE       &kp C_PP   &kp LG(LS(LBKT))   &kp LG(LS(RBKT))   &kp LG(LBKT)   &kp LG(RBKT)   &none   &kp RSHIFT
+  &none   &kp LALT   &kp LGUI   &trans   &none   &none   &kp RGUI   &none   &none   &none
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
-                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         // Raycast commands
         layer_raycast {
             bindings = <
-//    ┌─────┬─────┬─────┬──────────┬─────┬─────┐                 ┌─────┬─────┬──────────┬─────┬─────┬─────┐
-//    │     │     │     │          │     │     │                 │     │     │          │     │     │     │
-//    ├─────┼─────┼─────┼──────────┼─────┼─────┤                 ├─────┼─────┼──────────┼─────┼─────┼─────┤
-//    │     │     │     │ lgui(f1) │     │     │                 │     │     │          │     │     │     │
-//    ├─────┼─────┼─────┼──────────┼─────┼─────┤                 ├─────┼─────┼──────────┼─────┼─────┼─────┤
-//    │     │     │     │          │     │     │                 │     │     │ lgui(f2) │     │     │     │
-//    ├─────┼─────┼─────┼──────────┼─────┼─────┼──────┐   ┌──────┼─────┼─────┼──────────┼─────┼─────┼─────┤
-//    │     │     │     │          │     │     │ mute │   │ play │     │     │          │     │     │     │
-//    └─────┴─────┼─────┼──────────┼─────┼─────┼──────┤   ├──────┼─────┼─────┼──────────┼─────┼─────┴─────┘
-//                │     │          │     │     │      │   │      │     │     │          │     │
-//                └─────┴──────────┴─────┴─────┴──────┘   └──────┴─────┴─────┴──────────┴─────┘
-  &none   &none   &none   &none        &none   &none                               &none   &none   &none        &none   &none   &none
-  &none   &none   &none   &kp LG(F1)   &none   &none                               &none   &none   &none        &none   &none   &none
-  &none   &none   &none   &none        &none   &none                               &none   &none   &kp LG(F2)   &none   &none   &none
-  &none   &none   &none   &none        &none   &none   &kp K_MUTE       &kp C_PP   &none   &none   &none        &none   &none   &none
-                  &none   &none        &none   &none   &none            &none      &none   &none   &none        &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &kp LG(F1)   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &kp LG(F2)   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &kp K_MUTE       &kp C_PP   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
-                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         // Terminal/tmux session management
         layer_sessions {
             bindings = <
-//    ┌─────┬─────┬─────┬──────────┬─────┬─────┐                 ┌──────────┬─────┬─────┬─────┬─────┬─────┐
-//    │     │     │     │          │     │     │                 │          │     │     │     │     │     │
-//    ├─────┼─────┼─────┼──────────┼─────┼─────┤                 ├──────────┼─────┼─────┼─────┼─────┼─────┤
-//    │     │     │     │          │     │     │                 │          │     │     │     │     │     │
-//    ├─────┼─────┼─────┼──────────┼─────┼─────┤                 ├──────────┼─────┼─────┼─────┼─────┼─────┤
-//    │     │     │     │ lgui(f3) │     │     │                 │ lgui(f4) │     │     │     │     │     │
-//    ├─────┼─────┼─────┼──────────┼─────┼─────┼──────┐   ┌──────┼──────────┼─────┼─────┼─────┼─────┼─────┤
-//    │     │     │     │          │     │     │ mute │   │ play │          │     │     │     │     │     │
-//    └─────┴─────┼─────┼──────────┼─────┼─────┼──────┤   ├──────┼──────────┼─────┼─────┼─────┼─────┴─────┘
-//                │     │          │     │     │      │   │      │          │     │     │     │
-//                └─────┴──────────┴─────┴─────┴──────┘   └──────┴──────────┴─────┴─────┴─────┘
-  &none   &none   &none   &none        &none   &none                               &none        &none   &none   &none   &none   &none
-  &none   &none   &none   &none        &none   &none                               &none        &none   &none   &none   &none   &none
-  &none   &none   &none   &kp LG(F3)   &none   &none                               &kp LG(F4)   &none   &none   &none   &none   &none
-  &none   &none   &none   &none        &none   &none   &kp K_MUTE       &kp C_PP   &none        &none   &none   &none   &none   &none
-                  &none   &none        &none   &none   &none            &none      &none        &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &kp LG(F4)   &none   &none   &kp LG(F5)   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &kp K_MUTE       &kp C_PP   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
-                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         // Aerospace window manager
         layer_aerospace {
             bindings = <
-//    ┌─────┬─────┬─────┬─────┬─────┬─────┐                 ┌─────┬─────┬──────────┬─────────┬─────────┬─────┐
-//    │     │     │     │     │     │     │                 │     │     │          │         │         │     │
-//    ├─────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼──────────┼─────────┼─────────┼─────┤
-//    │     │     │     │     │     │     │                 │     │     │          │         │         │     │
-//    ├─────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼──────────┼─────────┼─────────┼─────┤
-//    │     │     │     │     │     │     │                 │     │     │          │         │         │     │
-//    ├─────┼─────┼─────┼─────┼─────┼─────┼──────┐   ┌──────┼─────┼─────┼──────────┼─────────┼─────────┼─────┤
-//    │     │     │     │     │     │     │ mute │   │ play │     │     │ lgui(f5) │ lalt(,) │ lalt(/) │     │
-//    └─────┴─────┼─────┼─────┼─────┼─────┼──────┤   ├──────┼─────┼─────┼──────────┼─────────┼─────────┴─────┘
-//                │     │     │     │     │      │   │      │     │     │          │         │
-//                └─────┴─────┴─────┴─────┴──────┘   └──────┴─────┴─────┴──────────┴─────────┘
-  &none   &none   &none   &none   &none   &none                               &none   &none   &none        &none           &none          &none
-  &none   &none   &none   &none   &none   &none                               &none   &none   &none        &none           &none          &none
-  &none   &none   &none   &none   &none   &none                               &none   &none   &none        &none           &none          &none
-  &none   &none   &none   &none   &none   &none   &kp K_MUTE       &kp C_PP   &none   &none   &kp LG(F5)   &kp LA(COMMA)   &kp LA(FSLH)   &none
-                  &none   &none   &none   &none   &none            &none      &none   &none   &none        &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &kp K_MUTE       &kp C_PP   &none   &none   &kp LG(F3)   &kp LA(COMMA)   &kp LA(FSLH)   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
-                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         // F1-F20 function keys
         layer_functions {
             bindings = <
-//    ┌─────┬──────┬──────┬──────┬──────┬─────┐                 ┌─────┬──────┬──────┬──────┬──────┬─────┐
-//    │     │      │      │      │      │     │                 │     │      │      │      │      │     │
-//    ├─────┼──────┼──────┼──────┼──────┼─────┤                 ├─────┼──────┼──────┼──────┼──────┼─────┤
-//    │     │  f1  │  f2  │  f3  │  f4  │ f5  │                 │ f6  │  f7  │  f8  │  f9  │ f10  │     │
-//    ├─────┼──────┼──────┼──────┼──────┼─────┤                 ├─────┼──────┼──────┼──────┼──────┼─────┤
-//    │     │ lctl │ lsft │ lalt │ lgui │     │                 │     │ rgui │ ralt │ rsft │ rctl │     │
-//    ├─────┼──────┼──────┼──────┼──────┼─────┼──────┐   ┌──────┼─────┼──────┼──────┼──────┼──────┼─────┤
-//    │     │ f11  │ f12  │ f13  │ f14  │ f15 │ mute │   │ play │ f16 │ f17  │ f18  │ f19  │ f20  │     │
-//    └─────┴──────┼──────┼──────┼──────┼─────┼──────┤   ├──────┼─────┼──────┼──────┼──────┼──────┴─────┘
-//                 │      │      │      │     │      │   │      │     │      │      │      │
-//                 └──────┴──────┴──────┴─────┴──────┘   └──────┴─────┴──────┴──────┴──────┘
-  &none   &none       &none        &none      &none      &none                                 &none     &none      &none      &none        &none       &none
-  &none   &kp F1      &kp F2       &kp F3     &kp F4     &kp F5                                &kp F6    &kp F7     &kp F8     &kp F9       &kp F10     &none
-  &none   &kp LCTRL   &kp LSHIFT   &kp LALT   &kp LGUI   &none                                 &none     &kp RGUI   &kp RALT   &kp RSHIFT   &kp RCTRL   &none
-  &none   &kp F11     &kp F12      &kp F13    &kp F14    &kp F15   &kp K_MUTE       &kp C_PP   &kp F16   &kp F17    &kp F18    &kp F19      &kp F20     &none
-                      &none        &none      &none      &none     &none            &none      &none     &none      &none      &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F6   &kp F7   &kp F8   &kp F9   &kp F10   &none
+  &none   &kp LCTRL   &kp LSHIFT   &kp LALT   &kp LGUI   &none   &none   &kp RGUI   &kp RALT   &kp RSHIFT   &kp RCTRL   &none
+  &none   &kp F11   &kp F12   &kp F13   &kp F14   &kp F15   &kp K_MUTE       &kp C_PP   &kp F16   &kp F17   &kp F18   &kp F19   &kp F20   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
-                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         // Keyboard settings - Bluetooth, reset
         layer_keyboard {
             bindings = <
-//    ┌─────┬──────────┬──────────┬────────────┬──────────┬──────────┐                ┌─────┬────────────┬─────┬─────┬─────┬────────┐
-//    │     │          │          │            │          │          │                │     │            │     │     │     │ bt_clr │
-//    ├─────┼──────────┼──────────┼────────────┼──────────┼──────────┤                ├─────┼────────────┼─────┼─────┼─────┼────────┤
-//    │     │          │          │            │          │          │                │     │            │     │     │     │        │
-//    ├─────┼──────────┼──────────┼────────────┼──────────┼──────────┤                ├─────┼────────────┼─────┼─────┼─────┼────────┤
-//    │     │ bt_sel 0 │ bt_sel 1 │  bt_sel 2  │ bt_sel 3 │ bt_sel 4 │                │     │            │     │     │     │        │
-//    ├─────┼──────────┼──────────┼────────────┼──────────┼──────────┼─────┐   ┌──────┼─────┼────────────┼─────┼─────┼─────┼────────┤
-//    │     │          │          │            │          │          │     │   │      │     │            │     │     │     │        │
-//    └─────┴──────────┼──────────┼────────────┼──────────┼──────────┼─────┤   ├──────┼─────┼────────────┼─────┼─────┼─────┴────────┘
-//                     │          │ &sys_reset │          │   boot   │     │   │ boot │     │ &sys_reset │     │     │
-//                     └──────────┴────────────┴──────────┴──────────┴─────┘   └──────┴─────┴────────────┴─────┴─────┘
-  &none   &none          &none          &none          &none          &none                                    &none   &none        &none   &none   &none   &bt BT_CLR
-  &none   &none          &none          &none          &none          &none                                    &none   &none        &none   &none   &none   &none
-  &none   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                             &none   &none        &none   &none   &none   &none
-  &none   &none          &none          &none          &none          &none          &none       &none         &none   &none        &none   &none   &none   &none
-                         &none          &sys_reset     &none          &bootloader    &none       &bootloader   &none   &sys_reset   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &bt BT_CLR
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none       &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &sys_reset   &none   &bootloader   &bootloader   &none   &sys_reset   &none   &none
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
-                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         // Template
         layer_template {
             bindings = <
-//    ┌─────┬─────┬─────┬─────┬─────┬─────┐               ┌─────┬─────┬─────┬─────┬─────┬─────┐
-//    │     │     │     │     │     │     │               │     │     │     │     │     │     │
-//    ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┼─────┤
-//    │     │     │     │     │     │     │               │     │     │     │     │     │     │
-//    ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┼─────┤
-//    │     │     │     │     │     │     │               │     │     │     │     │     │     │
-//    ├─────┼─────┼─────┼─────┼─────┼─────┼─────┐   ┌─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-//    │     │     │     │     │     │     │     │   │     │     │     │     │     │     │     │
-//    └─────┴─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┴─────┘
-//                │     │     │     │     │     │   │     │     │     │     │     │
-//                └─────┴─────┴─────┴─────┴─────┘   └─────┴─────┴─────┴─────┴─────┘
-  &none   &none   &none   &none   &none   &none                       &none   &none   &none   &none   &none   &none
-  &none   &none   &none   &none   &none   &none                       &none   &none   &none   &none   &none   &none
-  &none   &none   &none   &none   &none   &none                       &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
   &none   &none   &none   &none   &none   &none   &none       &none   &none   &none   &none   &none   &none   &none
-                  &none   &none   &none   &none   &none       &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
-                <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
     };
