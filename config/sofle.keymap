@@ -1,6 +1,6 @@
 // ==========================================================================
 // ZMK Keymap - Auto-generated
-// Generated: 2026-02-01T22:08:52.579495
+// Generated: 2026-02-14T17:45:33.323012
 // DO NOT EDIT - Modify keymap.yaml and run generate.py
 // ==========================================================================
 
@@ -25,10 +25,6 @@
 #define LAYER_KEYBOARD 11
 #define LAYER_TEMPLATE 99
 
-&uc {
-  default-mode = <UC_MODE_MACOS>;
-  minimum-length = <4>;
-};
 / {
     behaviors {
         // Homerow mod - standard
@@ -167,22 +163,22 @@
         // Numbers and symbols
         layer_symbols {
             bindings = <
-//    ┌──────────────┬─────┬─────┬─────┬─────┬─────┐                 ┌─────┬─────┬─────┬─────┬─────┬─────┐
-//    │              │     │     │     │     │     │                 │     │     │     │     │     │     │
-//    ├──────────────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼─────┤
-//    │      ~       │  !  │  @  │  #  │  $  │  %  │                 │  ^  │  &  │  *  │  -  │  +  │     │
-//    ├──────────────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼─────┤
-//    │  &uc 0x60 0  │  1  │  2  │  3  │  4  │  5  │                 │  6  │  7  │  8  │  9  │  0  │  '  │
-//    ├──────────────┼─────┼─────┼─────┼─────┼─────┼──────┐   ┌──────┼─────┼─────┼─────┼─────┼─────┼─────┤
-//    │ &uc 0x20A9 0 │     │  (  │  )  │  {  │  }  │ mute │   │ play │  [  │  ]  │  ,  │  _  │  =  │     │
-//    └──────────────┴─────┼─────┼─────┼─────┼─────┼──────┤   ├──────┼─────┼─────┼─────┼─────┼─────┴─────┘
-//                         │     │     │     │     │      │   │ spc  │     │ ent │     │     │
-//                         └─────┴─────┴─────┴─────┴──────┘   └──────┴─────┴─────┴─────┴─────┘
-  &none          &none      &none      &none      &none      &none                                    &none       &none      &none       &none       &none       &none
-  &kp TILDE      &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT                                &kp CARET   &kp AMPS   &kp STAR    &kp MINUS   &kp PLUS    &none
-  &uc 0x60 0     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                                   &kp N6      &kp N7     &kp N8      &kp N9      &kp N0      &kp SQT
-  &uc 0x20A9 0   &none      &kp LPAR   &kp RPAR   &kp LBRC   &kp RBRC    &kp K_MUTE       &kp C_PP    &kp LBKT    &kp RBKT   &kp COMMA   &kp UNDER   &kp EQUAL   &none
-                            &none      &none      &none      &none       &none            &kp SPACE   &none       &kp RET    &none       &none
+//    ┌────────────┬─────┬─────┬─────┬─────┬─────┐                 ┌─────┬─────┬─────┬─────┬─────┬─────┐
+//    │            │     │     │     │     │     │                 │     │     │     │     │     │     │
+//    ├────────────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     ~      │  !  │  @  │  #  │  $  │  %  │                 │  ^  │  &  │  *  │  -  │  +  │     │
+//    ├────────────┼─────┼─────┼─────┼─────┼─────┤                 ├─────┼─────┼─────┼─────┼─────┼─────┤
+//    │ &uc 0x0060 │  1  │  2  │  3  │  4  │  5  │                 │  6  │  7  │  8  │  9  │  0  │  '  │
+//    ├────────────┼─────┼─────┼─────┼─────┼─────┼──────┐   ┌──────┼─────┼─────┼─────┼─────┼─────┼─────┤
+//    │ &uc 0x20A9 │     │  (  │  )  │  {  │  }  │ mute │   │ play │  [  │  ]  │  ,  │  _  │  =  │     │
+//    └────────────┴─────┼─────┼─────┼─────┼─────┼──────┤   ├──────┼─────┼─────┼─────┼─────┼─────┴─────┘
+//                       │     │     │     │     │      │   │ spc  │     │ ent │     │     │
+//                       └─────┴─────┴─────┴─────┴──────┘   └──────┴─────┴─────┴─────┴─────┘
+  &none        &none      &none      &none      &none      &none                                    &none       &none      &none       &none       &none       &none
+  &kp TILDE    &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT                                &kp CARET   &kp AMPS   &kp STAR    &kp MINUS   &kp PLUS    &none
+  &uc 0x0060   &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                                   &kp N6      &kp N7     &kp N8      &kp N9      &kp N0      &kp SQT
+  &uc 0x20A9   &none      &kp LPAR   &kp RPAR   &kp LBRC   &kp RBRC    &kp K_MUTE       &kp C_PP    &kp LBKT    &kp RBKT   &kp COMMA   &kp UNDER   &kp EQUAL   &none
+                          &none      &none      &none      &none       &none            &kp SPACE   &none       &kp RET    &none       &none
             >;
 
             sensor-bindings =
@@ -219,22 +215,22 @@
         // System controls - volume, brightness, media
         layer_system {
             bindings = <
-//    ┌────────────────────────────┬───────────────┬─────────┬──────┬──────┬─────────┐                 ┌──────┬──────┬─────┬──────┬──────┬──────┐
-//    │            esc             │               │         │      │      │         │                 │      │      │     │      │      │      │
-//    ├────────────────────────────┼───────────────┼─────────┼──────┼──────┼─────────┤                 ├──────┼──────┼─────┼──────┼──────┼──────┤
-//    │            tab             │               │         │ volu │ bri+ │ lgui(=) │                 │ prev │      │     │ next │ play │      │
-//    ├────────────────────────────┼───────────────┼─────────┼──────┼──────┼─────────┤                 ├──────┼──────┼─────┼──────┼──────┼──────┤
-//    │ &my_lt laltYER_AEROspc esc │               │         │ vold │ bri- │ lgui(-) │                 │      │      │     │      │      │ ent  │
-//    ├────────────────────────────┼───────────────┼─────────┼──────┼──────┼─────────┼──────┐   ┌──────┼──────┼──────┼─────┼──────┼──────┼──────┤
-//    │            lsft            │ lgui(lctl(Q)) │ lgui(W) │      │      │         │ mute │   │ play │      │ mute │     │      │      │ rsft │
-//    └────────────────────────────┴───────────────┼─────────┼──────┼──────┼─────────┼──────┤   ├──────┼──────┼──────┼─────┼──────┼──────┴──────┘
-//                                                 │         │      │ del  │         │      │   │      │      │      │     │      │
+//    ┌────────────────────────────┬───────────────┬─────────┬──────┬──────┬─────────┐                 ┌──────┬──────┬─────┬──────┬───────────────┬──────┐
+//    │            esc             │               │         │      │      │         │                 │      │      │     │      │               │      │
+//    ├────────────────────────────┼───────────────┼─────────┼──────┼──────┼─────────┤                 ├──────┼──────┼─────┼──────┼───────────────┼──────┤
+//    │            tab             │               │         │ volu │ bri+ │ lgui(=) │                 │ prev │      │     │ next │     play      │      │
+//    ├────────────────────────────┼───────────────┼─────────┼──────┼──────┼─────────┤                 ├──────┼──────┼─────┼──────┼───────────────┼──────┤
+//    │ &my_lt laltYER_AEROspc esc │               │         │ vold │ bri- │ lgui(-) │                 │      │      │     │      │ lsft(lgui(;)) │ ent  │
+//    ├────────────────────────────┼───────────────┼─────────┼──────┼──────┼─────────┼──────┐   ┌──────┼──────┼──────┼─────┼──────┼───────────────┼──────┤
+//    │            lsft            │ lgui(lctl(Q)) │ lgui(W) │      │      │         │ mute │   │ play │      │ mute │     │      │               │ rsft │
+//    └────────────────────────────┴───────────────┼─────────┼──────┼──────┼─────────┼──────┤   ├──────┼──────┼──────┼─────┼──────┼───────────────┴──────┘
+//                                                 │         │      │      │         │      │   │      │      │ del  │     │      │
 //                                                 └─────────┴──────┴──────┴─────────┴──────┘   └──────┴──────┴──────┴─────┴──────┘
-  &kp ESC                      &none           &none       &none               &none                  &none                                       &none        &none        &none   &none        &none      &none
-  &kp TAB                      &none           &none       &kp C_VOLUME_UP     &kp C_BRIGHTNESS_INC   &kp LG(EQUAL)                               &kp C_PREV   &none        &none   &kp C_NEXT   &kp C_PP   &none
-  &my_lt LAYER_AEROSPACE ESC   &none           &none       &kp C_VOLUME_DOWN   &kp C_BRIGHTNESS_DEC   &kp LG(MINUS)                               &none        &none        &none   &none        &none      &kp RET
-  &kp LSHIFT                   &kp LG(LC(Q))   &kp LG(W)   &none               &none                  &none           &kp K_MUTE       &kp C_PP   &none        &kp K_MUTE   &none   &none        &none      &kp RSHIFT
-                                               &none       &none               &kp DEL                &none           &none            &none      &none        &none        &none   &none
+  &kp ESC                      &none           &none       &none               &none                  &none                                       &none        &none        &none   &none        &none              &none
+  &kp TAB                      &none           &none       &kp C_VOLUME_UP     &kp C_BRIGHTNESS_INC   &kp LG(EQUAL)                               &kp C_PREV   &none        &none   &kp C_NEXT   &kp C_PP           &none
+  &my_lt LAYER_AEROSPACE ESC   &none           &none       &kp C_VOLUME_DOWN   &kp C_BRIGHTNESS_DEC   &kp LG(MINUS)                               &none        &none        &none   &none        &kp LS(LG(SEMI))   &kp RET
+  &kp LSHIFT                   &kp LG(LC(Q))   &kp LG(W)   &none               &none                  &none           &kp K_MUTE       &kp C_PP   &none        &kp K_MUTE   &none   &none        &none              &kp RSHIFT
+                                               &none       &none               &none                  &none           &none            &none      &none        &kp DEL      &none   &none
             >;
 
             sensor-bindings =
@@ -271,22 +267,22 @@
         // Raycast commands
         layer_raycast {
             bindings = <
-//    ┌─────┬─────┬─────┬──────────┬─────┬─────┐                 ┌─────┬─────┬──────────┬─────┬─────┬─────┐
-//    │     │     │     │          │     │     │                 │     │     │          │     │     │     │
-//    ├─────┼─────┼─────┼──────────┼─────┼─────┤                 ├─────┼─────┼──────────┼─────┼─────┼─────┤
-//    │     │     │     │ lgui(f1) │     │     │                 │     │     │          │     │     │     │
-//    ├─────┼─────┼─────┼──────────┼─────┼─────┤                 ├─────┼─────┼──────────┼─────┼─────┼─────┤
-//    │     │     │     │          │     │     │                 │     │     │ lgui(f2) │     │     │     │
-//    ├─────┼─────┼─────┼──────────┼─────┼─────┼──────┐   ┌──────┼─────┼─────┼──────────┼─────┼─────┼─────┤
-//    │     │     │     │          │     │     │ mute │   │ play │     │     │          │     │     │     │
-//    └─────┴─────┼─────┼──────────┼─────┼─────┼──────┤   ├──────┼─────┼─────┼──────────┼─────┼─────┴─────┘
-//                │     │          │     │     │      │   │      │     │     │          │     │
-//                └─────┴──────────┴─────┴─────┴──────┘   └──────┴─────┴─────┴──────────┴─────┘
-  &none   &none   &none   &none        &none   &none                               &none   &none   &none        &none   &none   &none
-  &none   &none   &none   &kp LG(F1)   &none   &none                               &none   &none   &none        &none   &none   &none
-  &none   &none   &none   &none        &none   &none                               &none   &none   &kp LG(F2)   &none   &none   &none
-  &none   &none   &none   &none        &none   &none   &kp K_MUTE       &kp C_PP   &none   &none   &none        &none   &none   &none
-                  &none   &none        &none   &none   &none            &none      &none   &none   &none        &none
+//    ┌─────┬──────────┬─────┬──────────┬──────────┬───────────┐                 ┌───────────┬─────┬───────────┬─────┬─────┬─────┐
+//    │     │          │     │          │          │           │                 │           │     │           │     │     │     │
+//    ├─────┼──────────┼─────┼──────────┼──────────┼───────────┤                 ├───────────┼─────┼───────────┼─────┼─────┼─────┤
+//    │     │          │     │ lgui(f1) │          │ lgui(f11) │                 │ lgui(f12) │     │ lgui(f15) │     │     │     │
+//    ├─────┼──────────┼─────┼──────────┼──────────┼───────────┤                 ├───────────┼─────┼───────────┼─────┼─────┼─────┤
+//    │     │ lgui(f6) │     │ lgui(f8) │ lgui(f9) │ lgui(f10) │                 │ lgui(f13) │     │ lgui(f2)  │     │     │     │
+//    ├─────┼──────────┼─────┼──────────┼──────────┼───────────┼──────┐   ┌──────┼───────────┼─────┼───────────┼─────┼─────┼─────┤
+//    │     │          │     │ lgui(f7) │          │           │ mute │   │ play │ lgui(f14) │     │           │     │     │     │
+//    └─────┴──────────┼─────┼──────────┼──────────┼───────────┼──────┤   ├──────┼───────────┼─────┼───────────┼─────┼─────┴─────┘
+//                     │     │          │          │           │      │   │      │           │     │           │     │
+//                     └─────┴──────────┴──────────┴───────────┴──────┘   └──────┴───────────┴─────┴───────────┴─────┘
+  &none   &none        &none   &none        &none        &none                                     &none         &none   &none         &none   &none   &none
+  &none   &none        &none   &kp LG(F1)   &none        &kp LG(F11)                               &kp LG(F12)   &none   &kp LG(F15)   &none   &none   &none
+  &none   &kp LG(F6)   &none   &kp LG(F8)   &kp LG(F9)   &kp LG(F10)                               &kp LG(F13)   &none   &kp LG(F2)    &none   &none   &none
+  &none   &none        &none   &kp LG(F7)   &none        &none         &kp K_MUTE       &kp C_PP   &kp LG(F14)   &none   &none         &none   &none   &none
+                       &none   &none        &none        &none         &none            &none      &none         &none   &none         &none
             >;
 
             sensor-bindings =
@@ -297,22 +293,22 @@
         // Terminal/tmux session management
         layer_sessions {
             bindings = <
-//    ┌─────┬─────┬─────┬──────────┬─────┬─────┐                 ┌──────────┬─────┬─────┬─────┬─────┬─────┐
-//    │     │     │     │          │     │     │                 │          │     │     │     │     │     │
-//    ├─────┼─────┼─────┼──────────┼─────┼─────┤                 ├──────────┼─────┼─────┼─────┼─────┼─────┤
-//    │     │     │     │          │     │     │                 │          │     │     │     │     │     │
-//    ├─────┼─────┼─────┼──────────┼─────┼─────┤                 ├──────────┼─────┼─────┼─────┼─────┼─────┤
-//    │     │     │     │ lgui(f4) │     │     │                 │ lgui(f5) │     │     │     │     │     │
-//    ├─────┼─────┼─────┼──────────┼─────┼─────┼──────┐   ┌──────┼──────────┼─────┼─────┼─────┼─────┼─────┤
-//    │     │     │     │          │     │     │ mute │   │ play │          │     │     │     │     │     │
-//    └─────┴─────┼─────┼──────────┼─────┼─────┼──────┤   ├──────┼──────────┼─────┼─────┼─────┼─────┴─────┘
-//                │     │          │     │     │      │   │      │          │     │     │     │
-//                └─────┴──────────┴─────┴─────┴──────┘   └──────┴──────────┴─────┴─────┴─────┘
-  &none   &none   &none   &none        &none   &none                               &none        &none   &none   &none   &none   &none
-  &none   &none   &none   &none        &none   &none                               &none        &none   &none   &none   &none   &none
-  &none   &none   &none   &kp LG(F4)   &none   &none                               &kp LG(F5)   &none   &none   &none   &none   &none
-  &none   &none   &none   &none        &none   &none   &kp K_MUTE       &kp C_PP   &none        &none   &none   &none   &none   &none
-                  &none   &none        &none   &none   &none            &none      &none        &none   &none   &none
+//    ┌─────┬─────┬─────┬──────────┬───────────┬─────┐                 ┌───────────┬─────┬───────────┬─────┬─────┬─────┐
+//    │     │     │     │          │           │     │                 │           │     │           │     │     │     │
+//    ├─────┼─────┼─────┼──────────┼───────────┼─────┤                 ├───────────┼─────┼───────────┼─────┼─────┼─────┤
+//    │     │     │     │          │           │     │                 │           │     │           │     │     │     │
+//    ├─────┼─────┼─────┼──────────┼───────────┼─────┤                 ├───────────┼─────┼───────────┼─────┼─────┼─────┤
+//    │     │     │     │ lgui(f4) │           │     │                 │ lgui(f5)  │     │ lgui(f16) │     │     │     │
+//    ├─────┼─────┼─────┼──────────┼───────────┼─────┼──────┐   ┌──────┼───────────┼─────┼───────────┼─────┼─────┼─────┤
+//    │     │     │     │          │ lgui(f18) │     │ mute │   │ play │ lgui(f17) │     │           │     │     │     │
+//    └─────┴─────┼─────┼──────────┼───────────┼─────┼──────┤   ├──────┼───────────┼─────┼───────────┼─────┼─────┴─────┘
+//                │     │          │           │     │      │   │      │           │     │           │     │
+//                └─────┴──────────┴───────────┴─────┴──────┘   └──────┴───────────┴─────┴───────────┴─────┘
+  &none   &none   &none   &none        &none         &none                               &none         &none   &none         &none   &none   &none
+  &none   &none   &none   &none        &none         &none                               &none         &none   &none         &none   &none   &none
+  &none   &none   &none   &kp LG(F4)   &none         &none                               &kp LG(F5)    &none   &kp LG(F16)   &none   &none   &none
+  &none   &none   &none   &none        &kp LG(F18)   &none   &kp K_MUTE       &kp C_PP   &kp LG(F17)   &none   &none         &none   &none   &none
+                  &none   &none        &none         &none   &none            &none      &none         &none   &none         &none
             >;
 
             sensor-bindings =
