@@ -1,6 +1,6 @@
 // ==========================================================================
 // ZMK Keymap - Auto-generated
-// Generated: 2026-02-24T16:27:00.498417
+// Generated: 2026-02-24T21:50:07.121773
 // DO NOT EDIT - Modify keymap.yaml and run generate.py
 // ==========================================================================
 
@@ -8,6 +8,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 #define LAYER_BASE 0
@@ -250,7 +251,7 @@
         layer_keyboard {
             bindings = <
   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &bt BT_CLR
-  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+  &none   &none   &none   &out OUT_BLE   &out OUT_USB   &out OUT_TOG   &none   &none   &none   &none   &none   &none
   &none   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none   &none   &none   &none   &none   &none
   &none   &none   &none   &none   &none   &none   &none       &none   &none   &none   &none   &none   &none   &none
   &none   &none   &sys_reset   &none   &bootloader   &bootloader   &none   &sys_reset   &none   &none
