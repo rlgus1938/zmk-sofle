@@ -1,12 +1,11 @@
 // ==========================================================================
 // ZMK Keymap - Auto-generated
-// Generated: 2026-02-21T14:24:17.813211
+// Generated: 2026-02-24T16:27:00.498417
 // DO NOT EDIT - Modify keymap.yaml and run generate.py
 // ==========================================================================
 
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
-#include <behaviors/unicode.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
